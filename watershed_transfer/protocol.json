@@ -1,0 +1,22 @@
+{
+  "seeds": [42,43,44,45,46],
+  "prepared_dataset": "../watershed_experiments/prepared",
+  "patch_radius": 7,
+  "methods": ["rf_source","rf_target700","cnn_source","cnn_source_continued","cnn_self_training","cnn_filtered_self_training","cnn_prototype_all","cnn_selective_alignment","cnn_target700"],
+  "architecture": "center-spectrum MLP plus spatial5-band CNN; GroupNorm;64-dimensional joint embedding;7-class head",
+  "source_training": {"max_epochs":80,"min_epochs":20,"patience":12,"batch_size":64,"lr":0.001,"weight_decay":0.0001},
+  "adaptation": {"max_epochs":30,"min_epochs":10,"patience":8,"lr":0.0003,"pseudo_loss_weight":0.25,"prototype_loss_weight":0.1},
+  "pseudo_labels": {"confidence":0.9,"cap_per_class":200,"min_class_candidates":20,"prototype_similarity_quantile":0.1},
+  "class_reliability": {"minimum_predictions":10,"wilson_precision_lower_bound":0.6,"z":1.96},
+  "rf": {"n_estimators":500,"min_samples_leaf":1,"class_weight":"balanced_subsample","n_jobs":4},
+  "model_selection": "target700-label controller weighted macro-F1; all methods disclose700 target-label access. cnn_target700 uses these labels for fitting, fixed30 epochs and final checkpoint, no training-set validation.",
+  "source_continued_control": "same source-only further training budget as adaptation branches to separate extra optimization from adaptation",
+  "preprocessing": "mean/std fitted on source training patches only; same transform for every CNN branch",
+  "decision": "argmax; no risk weights; source CE class-balanced, pseudo CE unweighted",
+  "metrics": ["macro_f1","mean_iou","balanced_accuracy","accuracy","per_class_iou","per_class_recall"],
+  "development_weights": "existing inverse inclusion-probability weights",
+  "active_learning": false,
+  "target_pool_ground_truth_used": false,
+  "test_evaluated": false,
+  "limitations": "Five seeds share one class-supported spatial split.700 labeled target controls inform reliability and checkpoint selection;2000 separate development labels are evaluation overhead. Not zero-label UDA. Prototype/self-training variants are experimental adaptations, not exact named-paper reproductions or verified novelty."
+}

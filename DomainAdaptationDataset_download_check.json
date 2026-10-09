@@ -1,0 +1,108 @@
+{
+  "repository": "https://gitlab.citius.gal/HPC4RS/DomainAdaptationDataset",
+  "commit": "e17fff566e4f77bf6b4d7cd3fa995e25627c177f",
+  "files": [
+    {
+      "file": "Datasets/Oiteven.mat",
+      "bytes": 211115294,
+      "variables": [
+        [
+          "Oitaven",
+          [
+            6689,
+            6722,
+            5
+          ],
+          "double"
+        ]
+      ],
+      "sha256": "038190e9811a1cf38c5287c4feafbd7d2ea0a0f991791457576721a1d47f8017"
+    },
+    {
+      "file": "Datasets/Source.mat",
+      "bytes": 35864555,
+      "variables": [
+        [
+          "Source",
+          [
+            2501,
+            1898,
+            5
+          ],
+          "double"
+        ]
+      ],
+      "sha256": "ba4a9a56c788068ad45dd8a74662e01e7f734f7ae69b50a569984f0fcf231114"
+    },
+    {
+      "file": "Datasets/Source_gt.mat",
+      "bytes": 121141,
+      "variables": [
+        [
+          "Source_gt",
+          [
+            2501,
+            1898
+          ],
+          "double"
+        ]
+      ],
+      "sha256": "a6d625e2d9e1ed5fe7d0a68f53435e306cd65f2b70eb966a5a30efa52f086105",
+      "label_counts": {
+        "Source_gt": {
+          "0": 2285635,
+          "1": 3944,
+          "2": 16787,
+          "3": 11845,
+          "4": 32417,
+          "5": 141373,
+          "6": 5414,
+          "7": 2249483
+        }
+      }
+    },
+    {
+      "file": "Datasets/Target.mat",
+      "bytes": 141960467,
+      "variables": [
+        [
+          "Target",
+          [
+            6689,
+            4701,
+            5
+          ],
+          "double"
+        ]
+      ],
+      "sha256": "a5bc0d5bca1f71666650413221c6a25aebb58de4865da9b42887e4324dd48ffd"
+    },
+    {
+      "file": "Datasets/Target_gt.mat",
+      "bytes": 566430,
+      "variables": [
+        [
+          "Target_gt",
+          [
+            6689,
+            4701
+          ],
+          "double"
+        ]
+      ],
+      "sha256": "541431454bf6524b1cf7323565e1ebe236d4ea6224d8672fe998dcde9a15b9dc",
+      "label_counts": {
+        "Target_gt": {
+          "0": 27909937,
+          "1": 283219,
+          "2": 61093,
+          "3": 27413,
+          "4": 29898,
+          "5": 233494,
+          "6": 40767,
+          "7": 2859168
+        }
+      }
+    }
+  ]
+}

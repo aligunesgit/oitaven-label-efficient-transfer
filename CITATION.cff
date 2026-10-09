@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this repository and the original dataset publications."
+type: software
+title: "Oitaven: Label-Efficient Regional Transfer"
+version: 1.0.0
+date-released: 2026-10-09
+authors:
+  - family-names: "Güneş"
+    given-names: "Ali"
+    orcid: "https://orcid.org/0000-0003-3116-1184"
+    affiliation: "Istanbul Atlas University"
+repository-code: "https://github.com/aligunesgit/oitaven-label-efficient-transfer"
+license: MIT

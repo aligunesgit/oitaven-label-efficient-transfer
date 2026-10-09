@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "fixed_models_evaluated": 200,
+  "test_evaluated": true,
+  "models_frozen_before_test_label_access": true,
+  "no_fitting_after_test_access": true
+}

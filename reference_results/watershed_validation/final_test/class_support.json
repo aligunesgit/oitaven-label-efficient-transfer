@@ -1,0 +1,13 @@
+{
+  "counts": [
+    199,
+    0,
+    0,
+    0,
+    0,
+    10,
+    1791
+  ],
+  "all_seven_classes_represented": false,
+  "interpretation": "Absent classes unsupported; do not infer their recall or seven-class superiority."
+}
